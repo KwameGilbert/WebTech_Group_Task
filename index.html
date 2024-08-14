@@ -13,7 +13,9 @@
   <!-- Navbar -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container-fluid">
-      <a class="navbar-brand" href="#">FirstCode <span class="text-warning"> Inc.</span></a>
+      <h2>
+        <a class="navbar-brand" href="#">FirstCode <span class="text-warning"> Inc.</span></a>
+      </h2>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
         aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -24,13 +26,13 @@
             <a class="nav-link active" aria-current="page" href="#">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">About Us</a>
+            <a class="nav-link" href="#services">Services</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Services</a>
+            <a class="nav-link" href="#portfolio">Our Portfolio</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Pricing</a>
+            <a class="nav-link" href="#">Testimonials</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#">Contact Us</a>
@@ -40,29 +42,77 @@
     </div>
   </nav>
 
-  <!-- Header Section -->
-  <div class="container-fluid p-0">
-    <div class="position-relative" style="
-          background-image: url('./web-design.jpg');
+
+  <!-- Header Carousel Section -->
+  <div id="headerCarousel" class="carousel slide">
+    <div class="carousel-inner">
+      <!-- Slide 1 -->
+      <div class="carousel-item active position-relative" style="
+          background-image: url('./carousel1.jpg');
           background-size: cover;
           background-position: center;
           height: 350px;
         ">
-      <div class="position-absolute top-0 start-0 w-100 h-100 bg-dark bg-opacity-50"></div>
-      <!-- Dark overlay -->
-      <div class="position-relative justify-content-center align-items-center text-center text-white">
-        <div class="py-5">
-          <h1 class="display-4">We Build Stunning Websites & Mobile Apps</h1>
-          <p class="lead">Your vision, our expertise</p>
+        <div class="position-absolute top-0 start-0 w-100 h-100 bg-dark bg-opacity-50"></div>
+        <!-- Dark overlay -->
+        <div class="position-relative d-flex justify-content-center align-items-center text-center text-white">
+          <div class="py-5">
+            <h1 class="display-4">We Build Stunning Websites & Mobile Apps</h1>
+            <p class="lead">Your vision, our expertise</p>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Slide 2 -->
+      <div class="carousel-item position-relative" style="
+          background-image: url('./carousel2.jpg');
+          background-size: cover;
+          background-position: center;
+          height: 350px;
+        ">
+        <div class="position-absolute top-0 start-0 w-100 h-100 bg-dark bg-opacity-50"></div>
+        <!-- Dark overlay -->
+        <div class="position-relative d-flex justify-content-center align-items-center text-center text-white">
+          <div class="py-5">
+            <h1 class="display-4">Innovative Solutions for Your Digital Needs</h1>
+            <p class="lead">Transforming ideas into reality</p>
+          </div>
+        </div>
+      </div>
+      <!-- Slide 3 -->
+      <div class="carousel-item position-relative" style="
+          background-image: url('./carousel3.jpg');
+          background-size: cover;
+          background-position: center;
+          height: 350px;
+        ">
+        <div class="position-absolute top-0 start-0 w-100 h-100 bg-dark bg-opacity-50"></div>
+        <!-- Dark overlay -->
+        <div class="position-relative d-flex justify-content-center align-items-center text-center text-white">
+          <div class="py-5">
+            <h1 class="display-4">Excellence in Every Project</h1>
+            <p class="lead">Your success is our mission</p>
+          </div>
         </div>
       </div>
     </div>
+
+    <!-- Carousel Controls -->
+    <button class="carousel-control-prev" type="button" data-bs-target="#headerCarousel" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#headerCarousel" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+
   </div>
 
 
   <!-- Our Services -->
-  <div class="container-fluid my-5 mx--5 px-5 ">
-    <h2 class="text-center mb-4">Our Services</h2>
+  <div class="container-fluid my-0 mx--5 px-5 bg-light">
+    <h2 class="text-center mb-4 py-4" id="services">Our <span class="text-warning">Services</span></h2>
     <div class="row">
       <div class="col-md-4 mb-4">
         <div class="card">
@@ -104,9 +154,11 @@
   </div>
 
 
+
+
   <!-- Portfolio Section -->
   <div class="container-fluid my-0 mx--5 px-5 " style="background-color: orange;">
-    <h2 class="text-center mb-4">Our Work</h2>
+    <h2 class="text-center mb-4" id="portfolio">Our Work</h2>
     <div class="row">
 
       <div class="col-md-4 mb-4">
@@ -150,7 +202,8 @@
           <img src="./portfolio4.webp" class="card-img-top img-fluid" alt="Project 1">
           <div class="card-body">
             <h5 class="card-title">Snap Work</h5>
-            <p class="card-text">An aesthetic website for companies to hire skilled personnel to work remotely from the comfort of their homes. Join us today and revolutionize the way you hire!</p>
+            <p class="card-text">An aesthetic website for companies to hire skilled personnel to work remotely from the
+              comfort of their homes. Join us today and revolutionize the way you hire!</p>
           </div>
         </div>
       </div>
@@ -160,7 +213,8 @@
           <img src="./portfolio5.webp" class="card-img-top img-fluid" alt="Project 2">
           <div class="card-body">
             <h5 class="card-title">Suite</h5>
-            <p class="card-text">A multi-million dollar business productivity company that specializes in promoting and growing startups. We provide tailored solutions to help startups thrive in today's competitive market.</p>
+            <p class="card-text">A multi-million dollar business productivity company that specializes in promoting and
+              growing startups. We provide tailored solutions to help startups thrive in today's competitive market.</p>
           </div>
         </div>
       </div>
