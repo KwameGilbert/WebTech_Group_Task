@@ -6,12 +6,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Responsive Navbar</title>
   <!-- Bootstrap CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="./bootstrap/bootstrap.min.css" rel="stylesheet" />
 </head>
 
 <body>
+  <!-- Back to Top Button -->
+  <a href="#" class="btn btn-primary btn-lg rounded-circle position-fixed bottom-0 end-0 m-3" role="button"
+    aria-label="Back to Top" style="z-index: 1030;">
+    <!-- Arrow Up Symbol -->
+    &uarr;
+  </a>
+
+
   <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark" id="top">
     <div class="container-fluid">
       <h2>
         <a class="navbar-brand" href="#">FirstCode <span class="text-warning"> Inc.</span></a>
@@ -23,7 +31,7 @@
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ms-auto">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Home</a>
+            <a class="nav-link active" aria-current="page" href="#top">Home</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#services">Services</a>
@@ -35,7 +43,7 @@
             <a class="nav-link" href="#testimonials">Testimonials</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Contact Us</a>
+            <a class="nav-link" href="#contact-us">Contact Us</a>
           </li>
         </ul>
       </div>
@@ -108,6 +116,15 @@
 
   </div>
 
+  <!-- Newsletter -->
+  <div class="bg-dark text-white d-flex justify-content-between align-items-center p-3">
+    <p class="mb-0">Subscribe To Our Newsletter</p>
+    <form action="index.php" method="post" class="d-flex">
+      <input type="email" name="email" placeholder="Enter your email" class="form-control me-2">
+      <button type="submit" name="submit" class="btn"
+        style="background-color: #ff8000; color: white;">Subscribe</button>
+    </form>
+  </div>
 
 
 
@@ -157,12 +174,12 @@
 
   <!-- Portfolio Section -->
   <div class="container-fluid my-0 mx--5 px-5 " style="background-color: orange;">
-    <h2 class="text-center mb-4" id="portfolio">Our Work</h2>
+    <h2 class="text-center mb-4 py-4" id="portfolio">Our Works</h2>
     <div class="row">
 
       <div class="col-md-4 mb-4">
         <div class="card">
-          <img src="./portfolio1.webp" class="card-img-top img-fluid" alt="Project 1">
+          <img src="./images/portfolio1.webp" class="card-img-top img-fluid" alt="Project 1">
           <div class="card-body">
             <h5 class="card-title">The Bright Future of Web 3</h5>
             <p class="card-text">A smooth simple blog on web3 and crypto currency coupled with Tech Gadgets</p>
@@ -172,7 +189,7 @@
 
       <div class="col-md-4 mb-4">
         <div class="card">
-          <img src="./portfolio2.webp" class="card-img-top img-fluid" alt="Project 2">
+          <img src="./images/portfolio2.webp" class="card-img-top img-fluid" alt="Project 2">
           <div class="card-body">
             <h5 class="card-title">Skilled</h5>
             <p class="card-text">A website where individuals can learn top-notch skills like animation, design,
@@ -184,7 +201,7 @@
 
       <div class="col-md-4 mb-4">
         <div class="card">
-          <img src="./portfolio3.webp" class="card-img-top img-fluid" alt="Project 3">
+          <img src="./images/portfolio3.webp" class="card-img-top img-fluid" alt="Project 3">
           <div class="card-body">
             <h5 class="card-title">E-Commerce</h5>
             <p class="card-text">An E-Commerce website for sneakers and general fashion products. Browse our wide
@@ -198,7 +215,7 @@
     <div class="row">
       <div class="col-md-4 mb-4">
         <div class="card">
-          <img src="./portfolio4.webp" class="card-img-top img-fluid" alt="Project 1">
+          <img src="./images/portfolio4.webp" class="card-img-top img-fluid" alt="Project 1">
           <div class="card-body">
             <h5 class="card-title">Snap Work</h5>
             <p class="card-text">An aesthetic website for companies to hire skilled personnel to work remotely from the
@@ -209,7 +226,7 @@
 
       <div class="col-md-4 mb-4">
         <div class="card">
-          <img src="./portfolio5.webp" class="card-img-top img-fluid" alt="Project 2">
+          <img src="./images/portfolio5.webp" class="card-img-top img-fluid" alt="Project 2">
           <div class="card-body">
             <h5 class="card-title">Suite</h5>
             <p class="card-text">A multi-million dollar business productivity company that specializes in promoting and
@@ -220,7 +237,7 @@
 
       <div class="col-md-4 mb-4">
         <div class="card">
-          <img src="./portfolio6.webp" class="card-img-top img-fluid" alt="Project 3">
+          <img src="./images/portfolio6.webp" class="card-img-top img-fluid" alt="Project 3">
           <div class="card-body">
             <h5 class="card-title">Keyboard Master</h5>
             <p class="card-text">Find the best ergonomic keyboard to protect your wrist and hands as you work daily.
@@ -328,10 +345,10 @@
   <!-- Contact Form Section -->
   <div class="container my-5">
     <h2 class="text-center mb-4">Get in Touch With FirstCode <span class="text-warning">Inc.</span></h2>
-    <div class="row">
+    <div class="row" id="contact-us">
       <!-- Image Section -->
       <div class="col-md-6 my-5">
-        <img src="./contact-us.jpg" alt="Contact Us" class="img-fluid" style="width: 100%; height: auto;">
+        <img src="./images/contact-us.jpg" alt="Contact Us" class="img-fluid" style="width: 100%; height: auto;">
       </div>
 
       <!-- Form Section -->
@@ -345,12 +362,14 @@
                 <input type="text" class="form-control" id="name" placeholder="Your Name" required>
               </div>
             </div>
+
             <div class="col-12 mb-4">
               <div class="form-group">
                 <label for="email">Email</label>
                 <input type="email" class="form-control" id="email" placeholder="Your Email" required>
               </div>
             </div>
+
             <div class="col-12 mb-4">
               <div class="form-group">
                 <label for="message">Message</label>
